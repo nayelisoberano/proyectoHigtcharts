@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto tercer paracial | Suscribete</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<!-- Hola qué tal, te recuerdo que la web es de uso libre -->
+<!-- usala para lo que desees y no olvides suscribirte a AlexCG Design -->
+
+<body>
+    <header>
+        <div class="textos">
+            <h1 class="titulo">PROYECTO HIGCHARTS</h1>
+            <h3 class="subtitulo">Explicacion paso a paso</h3>
+            <a href="#" class="boton">Suscribete</a>
+        </div>
+        <div class="sesgoabajo"></div>
+    </header>
+    <main>
+        <section class="acerca-de">
+
+            div class="contenedor">
+                <h2 class="sobre-nosotros">Introduccion al uso de la libreria de Highcharts </h2>
+                <h3 class="slogan">introduccion a la asignatura </h3>
+                <p class="parrafo">Como tal la asinatura de Vizualizacion de datos tecnicos de la Lic. de Ciencias Computacianales nos hace introduccinor en conjuto a la particion del segundo parcial a los graficos de diferentes librerias la cual fueron sorteados con el fin de introducir al alumno al aprendisaje de almacenamiento y manejo de datos en conjunto a los graficos que son herraminetas sutiles que nos permiten vizulisar los datos de una manera mas facil y eficaz , por ello se busca aplicar el uso de la libreria de Highcharts de forma que se pueda obtener el aprendisaje esperado en conjunto de la aplicacion basica de Sublime Texts3.</p>
+
+
+            <div class="contenedor">
+                <h2 class="sobre-nosotros">¿Que es Highcharts?</h2>
+                <p class="parrafo">Highcharts es una biblioteca de gráficos basada únicamente en JavaScript destinada a mejorar las aplicaciones web mediante la adición de la capacidad de gráficos interactivos. Highcharts proporciona una amplia variedad de gráficos. Por ejemplo, gráficos de líneas, gráficos de spline, gráficos de área, gráficos de barras y gráficos circulares.</p>
+                <p class="parrafo">Trabajar con HighCharts es muy fácil. Lo primero que tenemos que hacer es instalar jQuery ya que el framework depende de él. Podríamos haber usado también Mootools o Prototype. Hecho esto podemos utilizar alguno de los códigos que viene de ejemplo en la librería para construir nuestra primera gráfica.</p>
+                
+            </div>
+
+
+            <div class="contenedor">
+                <h2 class="sobre-nosotros">Crear gráficas en JavaScript con Highcharts</h2>
+                <p class="parrafo">Highcharts es una potente librería para generar gráficas en JavaScript, ya sean gráficas sencillas o todo lo complejas que necesitemos.Para usarla solo tenemos que llamarla a través de su CDN:.
+
+                    <div align="center"><img src="https://i.ibb.co/jMBjSZB/captura1.png"></div>
+
+
+                <p class="parrafo">También está disponible en los repositovios NPM o descargándola directamente en code.hightcharts.com para el caso en que necesites una versión concreta.Para el ejemplo vamos a invocarla desde su CDN.
+                Crearemos un archivo index.html al que añadiremos:</p>
+
+                <div align="center"><img src="https://i.ibb.co/6RV3scH/captura-2.png"></div>
+
+
+                 <p class="parrafo">Lo único que hemos hecho es definir el DIV que contendrá la gráfica.</p>
+                 <p class="parrafo">Este ejemplo va a ser muy sencillo ya que vamos a disponer de los valores del eje vertical y horizontal previamente definidos.</p>
+
+
+                 <p class="parrafo">Estos valores representarán las temperaturas de los días de la semana de la siguiente forma:</p>
+
+                <li type="circle">Lunes: 10</li>
+                <li type="circle">Martes: 12</li>
+                <li type="circle">Miércoles: 9</li>
+                <li type="circle">Jueves: 11</li>
+                <li type="circle">Viernes: 10</li>
+                <li type="circle">Sábado: 15</li>
+                <li type="circle">Domingo: 16</li>
+
+                  <p class="parrafo">Justo debajo del DIV de temperaturas vamos a crear el script que genere la gráfica con estos valores:</p>
+                  <div align="center"><img src="https://i.ibb.co/ZB30kmY/captura3.png"></div>
+
+                  <p class="parrafo">Si ejecutamos la página deberemos tener una gráfica como esta:</p>
+                  <div align="center"><img src="https://i.ibb.co/VwK7BbJ/captura4.png"></div>
+
+
+                <div class="contenedor">
+                <h2 class="sobre-nosotros">Analisis del codigo</h2>
+                <p class="parrafo">Vamos a analizar el código. Puesto que ahora tenemos 2 series de valores en la gráfica, necesitamos 2 arrays para almacenarlos:</p>
+                  <div align="center"><img src="https://i.ibb.co/m0qHSdR/captura5.png"></div>
+
+                  <p class="parrafo">Además necesitamos un tercer array para almanenar la fecha en la que hemos anotado cada valor:</p>
+                  <div align="center"><img src="https://i.ibb.co/9p8kHf1/captura6.png"></div>
+
+                <p class="parrafo">En la construcción de la gráfica, vamos a empezar por los valores de temperatura interior:</p>
+                <div align="center"><img src="https://i.ibb.co/JxQLDJJ/captura7.png"></div>
+
+                <p class="parrafo">La definición es igual a la primera gráfica que hicimos, solo que en este caso el eje horizontal será una línea de tiempo (no sabemos el número de posiciones):</p>
+                <div align="center"><img src="https://i.ibb.co/XxQ0hLj/captura8.png"></div>
+
+
+                <p class="parrafo">Creamos el primer data con los valores de temperatura interior:</p>
+                <div align="center"><img src="https://i.ibb.co/31VX9Zh/captura9.png"></div>
+
+                <p class="parrafo">Lo más complejo de esta parte es que necesitamos convertir nuestras fechas a formato timestamp, que es un tipo de cadena numérica incomprensible para una persona.</p>
+
+                <p class="parrafo">Para ello, en cada paso del bucle vamos a tomar la fecha (en formato humano) y la vamos a almacenar en una variable fecha:</p>
+
+                <div align="center"><img src="https://i.ibb.co/R068jQR/captura10.png"></div>
+
+                <p class="parrafo">Ahora le quitamos los guiones con metodo split (o las diagonales si tus fechas son estilo 01/12/2021):</p>
+                <div align="center"><img src="https://i.ibb.co/KDjY1M3/captura11.png"></div>
+
+                <p class="parrafo">Creamos un nuevo objeto de fecha con el siguiente formato:</p>
+                <div align="center"><img src="https://i.ibb.co/w72KdsY/captura12.png"></div>
+
+                <p class="parrafo">Y por último lo añadimos al data, junto con su valor de temperatura correspondiente:</p>
+                <div align="center"><img src="https://i.ibb.co/1KskY7q/captura13.png"></div>
+
+                <p class="parrafo">Después de retornar el data de temperatura interior, añadimos los registros para las temperaturas exteriores:</p>
+                <div align="center"><img src="https://i.ibb.co/d6MkvJX/catura14.png"></div>
+
+                <p class="parrafo">La librería se encarga automáticamente de generar colores distintos para cada línea de datos y de definir la línea de tiempo entre la primera y última fecha de los registros que insertemos.Todo esto se puede complicar todo lo que queramos, la librería es muy completa y dispone de múltiples opciones y parámetros a definir, además de varios de tipos de gráficas (no solo lineales).</p>
+                
+                <div class="contenedor">
+                <h2 class="sobre-nosotros">Aprendisaje Esperado </h2>
+                <p class="parrafo">Este trabajo tuvo como resultado el uso de la libreria principal de Highcharts en cual se puso en practica en repetidas ocasiones como Visual studio Basic y Sublime text 3 con el fin de poner en prcaticas los conomientos obtenidos en base a la asigntura. </p>
+
+
+
+
+
+                <a href="#" class="boton">Suscribete</a>
+            </div>
+
+        </section>
+        <section class="galeria">
+            <div class="sesgoarriba"></div>
+            <div class="imagenes none">
+                <img src="1.jpg" alt="">
+            </div>
+            <div class="imagenes">
+                <img src="3.jpg" alt="">
+            </div>
+            <div class="imagenes">
+                <img src="2.jpg" alt="">
+                <div class="encima">
+                    <h2>Empecemos a trabajar</h2>
+                    <div></div>
+                </div>
+            </div>
+            <div class="imagenes">
+                <img src="4.jpeg" alt="">
+
+            </div>
+            <div class="imagenes none">
+                <img src="5.jpeg" alt="">
+            </div>
+            <div class="sesgoabajo"></div>
+        </section>
+        <section class="miembros">
+            <div class="contenedor">
+                <h2 class="sobre-nosotros">Complemento de Libreria</h2>
+                <h3 class="slogan">Los mejores graficos</h3>
+                <div class="cards">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjnzSOCzBO5kDiT3PE-mLq1Ai42-OjkgiN7BJI_0-pGQJg-FsAMLAc_QL5vljjzwaLDP8&usqp=CAU">
+                        <h4>Highcharts</h4>
+                        <p>La mejor libreria.</p>
+                    </div>
+                    <div class="card">
+                         <img src="http://1000marcas.net/wp-content/uploads/2020/11/JavaScript-logo.jpg">
+                        <h4>Javascript</h4>
+                        <p>El mejor complememto.</p>
+                    </div>
+                    <div class="card">
+                         <img src="https://camo.githubusercontent.com/cf422553ac91c9c804c45dae498b1572861accbe674a7ab63c5fbc6cfd45f8be/68747470733a2f2f7777772e7969696672616d65776f726b2e636f6d2f657874656e73696f6e2f796969322d686967686368617274732d7769646765742f66696c65732f73637265656e73686f742e706e67">
+                        <h4>Graficos</h4>
+                        <p>Los mejores graficos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <footer>
+        <div class="contenedor">
+            <h2 class="titulo-footer">Contactanos</h2>
+            <h3 class="subtitulo-footer">Lo apreciariamos mucho</h3>
+            <div class="footer">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Nombre">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese su mensaje..."></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
